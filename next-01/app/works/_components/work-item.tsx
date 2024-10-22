@@ -31,7 +31,7 @@ const WorkItem = ({
       className="w-full cursor-pointer hover:scale-105 transition-all duration-300"
       onClick={() => handleClick(id)}
     >
-      <div className="flex gap-4">
+      <div className="sm:flex gap-4">
         <div className="w-fit relative rounded-md">
           <Image
             className="object-cover rounded-md"
@@ -41,7 +41,7 @@ const WorkItem = ({
             width={400}
           />
         </div>
-        <div className="">
+        <div className="mt-2">
           <span className="text-2xl font-bold">{name}</span>
           <div className="mt-4 flex gap-3">
             <span className="px-4 bg-black text-white rounded-xl">

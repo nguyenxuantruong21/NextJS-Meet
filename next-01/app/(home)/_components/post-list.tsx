@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import PostItem from "./post-item";
 
 const POSTS = [
@@ -23,14 +24,23 @@ const POSTS = [
 
 const PostLists = () => {
   return (
-    <div className="w-full bg-cyan-50 px-72 py-6">
-      <div className="flex items-center justify-between">
-        <button className="text-zinc-700 text-lg font-medium">
+    <div className={cn("w-full bg-cyan-50 sm:px-72 sm:py-6 py-2")}>
+      <div
+        className={cn(
+          "flex items-center justify-center pb-2 sm:justify-between"
+        )}
+      >
+        <button className={cn("text-zinc-700 text-lg font-medium")}>
           Recent posts
         </button>
-        <button className="text-cyan-700">View all</button>
+        <button className="hidden sm:block text-cyan-700">View all</button>
       </div>
-      <div className="grid grid-cols-2 gap-6 justify-center items-center max-w-screen-lg mx-auto">
+      <div
+        className={cn(
+          "flex flex-col gap-3",
+          "sm:grid sm:grid-cols-2 gap-6 justify-center items-center max-w-screen-lg mx-auto"
+        )}
+      >
         {POSTS.map((post) => (
           <PostItem
             key={post.id}

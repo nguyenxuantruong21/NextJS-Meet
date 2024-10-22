@@ -1,14 +1,14 @@
-import FeaturedList from "./components/featured-list";
-import Infomation from "./components/infomation";
-import PostLists from "./components/post-list";
+import FeaturedList from "./_components/featured-list";
+import Infomation from "./_components/infomation";
+import PostLists from "./_components/post-list";
 
 const HomePage = () => {
   return (
-    <div className="w-full h-full">
+    <>
       <Infomation />
       <PostLists />
       <FeaturedList />
-    </div>
+    </>
   );
 };
 

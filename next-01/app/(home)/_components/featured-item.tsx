@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 interface FeatureItemProps {
@@ -17,7 +18,7 @@ const FeatureItem = ({
 }: FeatureItemProps) => {
   return (
     <div className="w-full">
-      <div className="flex gap-4">
+      <div className={cn("sm:flex sm:gap-4")}>
         <div className="w-fit relative rounded-md">
           <Image
             className="object-cover rounded-md"
@@ -27,7 +28,7 @@ const FeatureItem = ({
             width={400}
           />
         </div>
-        <div className="">
+        <div className="pt-2">
           <span className="text-2xl font-bold">{name}</span>
           <div className="mt-4 flex gap-3">
             <span className="px-4 bg-black text-white rounded-xl">

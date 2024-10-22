@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const WorkDetail = () => {
   return (
-    <div className="px-72 w-full">
-      <div className="text-3xl font-bold">
+    <div className="sm:px-72 w-full px-4">
+      <div className="text-3xl font-bold mt-10">
         Designing Dashboards with usability in mind
       </div>
       <div className="flex gap-3 mt-6">

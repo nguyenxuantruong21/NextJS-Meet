@@ -1,4 +1,4 @@
-import WorkItem from "./components/work-item";
+import WorkItem from "./_components/work-item";
 
 const WORKS = [
   {
@@ -38,8 +38,8 @@ const WORKS = [
 
 const WorkPage = () => {
   return (
-    <div className="px-72">
-      <div className="text-4xl font-bold mt-20">Works</div>
+    <div className="sm:px-72 px-4">
+      <div className="text-4xl font-bold sm:mt-20 mt-10">Works</div>
       <div className="flex flex-col gap-14 mt-10">
         {WORKS.map((item) => (
           <WorkItem

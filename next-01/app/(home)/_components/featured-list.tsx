@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import FeatureItem from "./featured-item";
 
 const FEATURED_LIST = [
@@ -38,9 +39,11 @@ const FEATURED_LIST = [
 
 const FeaturedList = () => {
   return (
-    <div className="px-72 mt-6">
-      <div>Featured Works</div>
-      <div className="flex flex-col gap-10">
+    <div className={cn("sm:px-72 mt-6")}>
+      <div className={cn("flex items-center justify-center p-3 text-lg")}>
+        Featured Works
+      </div>
+      <div className="flex flex-col gap-10 px-4">
         {FEATURED_LIST.map((featured) => (
           <FeatureItem
             key={featured.id}

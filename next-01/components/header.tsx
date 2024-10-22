@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { IoHome } from "react-icons/io5";
 import { useEffect, useState } from "react";
+import ToggleMenu from "./toggle-menu";
 
 const Header = () => {
   const [currentPath, setCurrentPath] = useState("");
@@ -13,8 +14,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="px-72">
-      <ul className="flex items-center justify-end gap-8 text-xl font-bold">
+    <header className="w-full pt-2 px-6 sm:px-72">
+      <ul
+        className={cn(
+          "sm:flex items-center justify-end gap-8 text-xl font-bold",
+          "hidden"
+        )}
+      >
         <Link
           href="/"
           className={cn(
@@ -52,6 +58,7 @@ const Header = () => {
           Contact
         </Link>
       </ul>
+      <ToggleMenu />
     </header>
   );
 };

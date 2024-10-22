@@ -1,4 +1,4 @@
-import BlogItem from "./components/blog-item";
+import BlogItem from "./_components/blog-item";
 
 const BLOGS = [
   {
@@ -38,8 +38,8 @@ const BLOGS = [
 
 const BlogPage = () => {
   return (
-    <div className="px-72">
-      <div className="text-4xl font-bold mt-20">Blog</div>
+    <div className="sm:px-72 px-4">
+      <div className="text-4xl font-bold sm:mt-20 mt-10">Blog</div>
       <div className="flex flex-col gap-14 mt-10">
         {BLOGS.map((blog) => (
           <BlogItem
